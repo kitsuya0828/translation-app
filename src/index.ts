@@ -48,7 +48,6 @@ app.post('/translate', zValidator('json', schema), async (c) => {
         )
         return {
           text: response.translated_text,
-          detected_source_language: data.source_lang,
         }
       } catch (error: unknown) {
         if (error instanceof Error) {
